@@ -1,4 +1,4 @@
-
+/* eslint-disable react/jsx-max-depth */
 .previewTitle {
   padding-top   : 60px;
   padding-bottom: 45px;
@@ -7,8 +7,8 @@
 }
 
 .backCard {
-  width: 230px;
-  height: 350px;
+  width: 280px;
+  height: 390px;
   background-color: #036b52;
   margin: 0 auto;
   border-radius: 15px;
@@ -17,8 +17,8 @@
 }
 
 .card {
-  width: 190px;
-  height: 310px;
+  width: 240px;
+  height: 360px;
   background-color: #fafafa;
   margin-right: auto;
   margin-left: auto;
@@ -64,9 +64,9 @@
 }
 
 .trumpIcon p {
-margin-top: 9px;
-margin-left: 5px;
-transform: rotate(-10deg);
+  margin-top: 9px;
+  margin-left: 5px;
+  transform: rotate(-10deg);
 }
 
 .descriptionDiv {
@@ -91,24 +91,23 @@ transform: rotate(-10deg);
 .attributes {
   background-color: white;
   padding-top: 5px;
+  display: grid; /* Change display to grid */
+  grid-template-columns: repeat(2, auto); /* Divide into two columns */
 }
 
-.atts {
+.atts,
+.attsDif {
   color: black;
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: flex-end;
   font-size: 13px;
-  padding-right: 15px;
   padding-top: 3px;
 }
 
-.atts h2 {
+.atts h2,
+.attsDif h2 {
   background-color: #023031;
   color: #fafafa;
   padding: 1px 5px;
-  border-bottom-right-radius:3px;
+  border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
   min-width: 30px;
   min-height: 20px;
@@ -116,12 +115,13 @@ transform: rotate(-10deg);
   padding-top: 3px;
 }
 
-.atts p {
+.atts p,
+.attsDif p {
   background-color: #d3d3d3;
   padding-left: 5px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   align-self: center;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -142,5 +142,5 @@ transform: rotate(-10deg);
   position: absolute;
   right: 0;
   bottom: -25px;
-  border-top-right-radius:0 ;
+  border-top-right-radius: 0;
 }

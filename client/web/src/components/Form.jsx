@@ -12,6 +12,9 @@ class Form extends React.Component {
       cardAttr1, 
       cardAttr2,
       cardAttr3,
+      cardAttr4,
+      cardAttr5,
+      cardAttr6,
       cardTrunfo,
       cardImage,
       onSaveButtonClick,
@@ -51,7 +54,7 @@ class Form extends React.Component {
         <div className='attrDiv'>
           <div className='attrs'>
             <label htmlFor="att1">
-              Str.
+              Rank
             </label>
             <input
               type="number"
@@ -66,7 +69,7 @@ class Form extends React.Component {
 
           <div className='attrs'>
             <label htmlFor="att2">
-              Int.
+              Runs
               <input
                 type="number"
                 name="cardAttr2"
@@ -81,7 +84,7 @@ class Form extends React.Component {
 
           <div className='attrs'>
             <label htmlFor="att3">
-              Agi.
+              High
               <input
                 type="number"
                 name="cardAttr3"
@@ -91,6 +94,51 @@ class Form extends React.Component {
             </label>
 
             {cardAttr3 > 0 && cardAttr3 <= maxAttrValue
+              ? <img src={ checked } alt="checked" className='checked' /> :
+              <img src={ alert } alt="alert" className='alert' />}
+          </div>
+          <div className='attrs'>
+            <label htmlFor="att4">
+              d_out
+              <input
+                type="number"
+                name="cardAttr4"
+                value={ cardAttr4 }
+                onChange={ onInputChange }
+              />
+            </label>
+
+            {cardAttr4 > 0 && cardAttr4 <= maxAttrValue
+              ? <img src={ checked } alt="checked" className='checked' /> :
+              <img src={ alert } alt="alert" className='alert' />}
+          </div>
+          <div className='attrs'>
+            <label htmlFor="att5">
+              total 4
+              <input
+                type="number"
+                name="cardAttr5"
+                value={ cardAttr5 }
+                onChange={ onInputChange }
+              />
+            </label>
+
+            {cardAttr5 > 0 && cardAttr5 <= maxAttrValue
+              ? <img src={ checked } alt="checked" className='checked' /> :
+              <img src={ alert } alt="alert" className='alert' />}
+          </div>
+          <div className='attrs'>
+            <label htmlFor="att6">
+              total 6
+              <input
+                type="number"
+                name="cardAttr6"
+                value={ cardAttr6 }
+                onChange={ onInputChange }
+              />
+            </label>
+
+            {cardAttr6 > 0 && cardAttr6 <= maxAttrValue
               ? <img src={ checked } alt="checked" className='checked' /> :
               <img src={ alert } alt="alert" className='alert' />}
           </div>

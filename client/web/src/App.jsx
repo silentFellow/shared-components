@@ -13,6 +13,9 @@ class App extends React.Component {
       cardAttr1: '',
       cardAttr2: '',
       cardAttr3: '',
+      cardAttr4: '',
+      cardAttr5: '',
+      cardAttr6: '',
       cardImage: '',
       cardRare: 'normal',
       hasTrunfo: false,
@@ -38,7 +41,7 @@ class App extends React.Component {
   onSaveButtonClick = (event) => {
     event.preventDefault();
 
-    const { cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3,
+    const { cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3,cardAttr4,cardAttr5,cardAttr6,
       cardRare, cardTrunfo, cardImage } = this.state;
 
     const card = {
@@ -48,6 +51,9 @@ class App extends React.Component {
       cardAttr1,
       cardAttr2,
       cardAttr3,
+      cardAttr4,
+      cardAttr5,
+      cardAttr6,
       cardRare,
       cardTrunfo,
     };
@@ -63,6 +69,9 @@ class App extends React.Component {
       cardAttr1: '',
       cardAttr2: '',
       cardAttr3: '',
+      cardAttr4: '',
+      cardAttr5: '',
+      cardAttr6: '',
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
@@ -74,7 +83,7 @@ class App extends React.Component {
 
   buttonEnabler = () => {
     const { cardName, cardAttr1, cardAttr2,
-      cardAttr3, cardImage } = this.state;
+      cardAttr3,cardAttr4,cardAttr5,cardAttr6, cardImage } = this.state;
     const maxAttrValue = 90;
     const maxTotalAttr = 210;
     if (cardName !== ''
@@ -84,7 +93,13 @@ class App extends React.Component {
       && parseInt(cardAttr2, 10) <= maxAttrValue
       && parseInt(cardAttr3, 10) >= 0
       && parseInt(cardAttr3, 10) <= maxAttrValue
-      && parseInt(cardAttr1, 10) + parseInt(cardAttr2, 10) + parseInt(cardAttr3, 10)
+      && parseInt(cardAttr4, 10) >= 0
+      && parseInt(cardAttr4, 10) <= maxAttrValue
+      && parseInt(cardAttr5, 10) >= 0
+      && parseInt(cardAttr5, 10) <= maxAttrValue
+      && parseInt(cardAttr6, 10) >= 0
+      && parseInt(cardAttr6, 10) <= maxAttrValue
+      && parseInt(cardAttr1, 10) + parseInt(cardAttr2, 10) + parseInt(cardAttr3, 10)+ parseInt(cardAttr4, 10)+ parseInt(cardAttr5, 10)+ parseInt(cardAttr6, 10)
       <= maxTotalAttr
       && cardImage !== '') {
       this.setState({ isSaveButtonDisabled: false });

@@ -27,16 +27,28 @@ class Card extends React.Component {
             </div>
             <div className='attributes'>
               <div className='att1 atts'>
-                <p>Strenght.................</p>
+                <p>Rank</p>
                 <h2>{ props.cardAttr1 ? props.cardAttr1 : '00' }</h2>
               </div>
               <div className='att2 atts'>
-                <p>Intelligence.............</p>
+                <p>Runs</p>
                 <h2>{ props.cardAttr2 ? props.cardAttr2 : '00' }</h2>
               </div>
               <div className='att3 atts'>
-                <p>Agility....................</p>
+                <p>High Score:</p>
                 <h2>{ props.cardAttr3 ? props.cardAttr3 : '00' }</h2>
+              </div>
+              <div className='att4 attsDif' style={{justifyContent:'flex-end'}}>
+                <p>Duck's outs:</p>
+                <h2>{ props.cardAttr4 ? props.cardAttr4 : '00' }</h2>
+              </div>
+              <div className='att5 attsDif' style={{justifyContent:'flex-end'}}>
+                <p>Total 4's:</p>
+                <h2>{ props.cardAttr5 ? props.cardAttr5 : '00' }</h2>
+              </div>
+              <div className='att6 attsDif' style={{justifyContent:'flex-end'}}>
+                <p>Total 6's:</p>
+                <h2>{ props.cardAttr6 ? props.cardAttr6 : '00' }</h2>
               </div>
             </div>
             <div className='rarityDiv'>
@@ -55,6 +67,9 @@ Card.propTypes = {
   cardAttr1: PropTypes.string.isRequired,
   cardAttr2: PropTypes.string.isRequired,
   cardAttr3: PropTypes.string.isRequired,
+  cardAttr4: PropTypes.string.isRequired,
+  cardAttr5: PropTypes.string.isRequired,
+  cardAttr6: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
